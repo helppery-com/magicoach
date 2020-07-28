@@ -9,6 +9,10 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: magicoach
+    ports:
+      - 3306:3306
+    volumes:
+      - ../database/:/database
 
   adminer:
     image: adminer
